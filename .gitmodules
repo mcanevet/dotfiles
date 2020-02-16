@@ -1,0 +1,6 @@
+[submodule "tmp/.tmux"]
+	path = tmp/.tmux
+	url = git@github.com:gpakosz/.tmux.git
+[submodule ".tmux"]
+	path = .tmux
+	url = git@github.com:gpakosz/.tmux.git
