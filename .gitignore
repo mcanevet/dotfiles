@@ -1,0 +1,16 @@
+*
+!.config/
+!.config/**/*
+.config/dconf/
+.config/evolution/
+.config/gnome-control-center/
+.config/gtk-3.0/
+.config/htop/
+.config/nvim/.netrwhist
+.config/nvim/autoload/
+.config/nvim/ftplugin/
+.config/nvim/plugged/
+.config/pulse/
+.config/torbrowser/
+.config/user-dirs.dirs
+.config/user-dirs.locale
