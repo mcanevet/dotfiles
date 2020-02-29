@@ -8,6 +8,7 @@
 .config/gtk-3.0/
 .config/htop/
 .config/ibus/
+.config/libreoffice/
 .config/nvim/.netrwhist
 .config/nvim/autoload/
 .config/nvim/ftplugin/
