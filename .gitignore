@@ -1,6 +1,7 @@
 *
 !.config/
 !.config/**/*
+.config/QtProject.conf
 .config/dconf/
 .config/evolution/
 .config/gnome-control-center/
@@ -12,6 +13,7 @@
 .config/nvim/ftplugin/
 .config/nvim/plugged/
 .config/pulse/
+.config/syncthing/
 .config/torbrowser/
 .config/user-dirs.dirs
 .config/user-dirs.locale
