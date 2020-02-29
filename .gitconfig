@@ -1,3 +1,6 @@
 [user]
 	name = Mickaël Canévet
 	email = mickael.canevet@gmail.com
+[filter "keepassxc"]
+	clean = sed -e '/^MainWindowGeometry=/'d -e '/^MainWindowState=/'d
+	smudge = cat
