@@ -1,5 +1,7 @@
 aptitude
 curl
+docker
+docker-compose
 git
 htop
 keepassxc
