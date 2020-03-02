@@ -76,6 +76,7 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 export PATH="$HOME/bin:$PATH"
+export SUMMON_PROVIDER=$HOME/bin/summon-gopass
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -98,3 +99,6 @@ export PATH="$HOME/bin:$PATH"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias helmfile="summon helmfile -i"
+alias oc="summon oc"
+alias kubectl="summon kubectl"
