@@ -111,3 +111,7 @@ terraform() {
 		summon ~/.tfenv/bin/terraform $@
 	fi
 }
+
+ssh() {
+	 TERM=screen-256color /usr/bin/ssh $@ -t -- /bin/sh -c 'tmux has-session && exec tmux attach || exec tmux new-session'
+}
