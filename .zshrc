@@ -102,3 +102,12 @@ export SUMMON_PROVIDER=$HOME/bin/summon-gopass
 alias helmfile="summon helmfile -i"
 alias oc="summon oc"
 alias kubectl="summon kubectl"
+
+terraform() {
+	if [[ $1 == "destroy" ]] && [[ "$CONFIRM_DESTROY" != "1" ]] then
+		echo "Destroy disabled"
+		return -1
+	else
+		summon ~/.tfenv/bin/terraform $@
+	fi
+}
