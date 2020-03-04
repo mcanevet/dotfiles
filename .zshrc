@@ -75,7 +75,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.tfenv/bin:$HOME/bin:$PATH"
 export SUMMON_PROVIDER=$HOME/bin/summon-gopass
 
 # You may need to manually set your language environment
