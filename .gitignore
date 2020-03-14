@@ -36,6 +36,7 @@
 .config/pulse/
 .config/syncthing/
 .config/torbrowser/
+.config/totem/
 .config/user-dirs.dirs
 .config/user-dirs.locale
 .config/zoomus.conf
