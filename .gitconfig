@@ -2,5 +2,5 @@
 	name = Mickaël Canévet
 	email = mickael.canevet@gmail.com
 [filter "keepassxc"]
-	clean = sed -e '/^MainWindowGeometry=/'d -e '/^MainWindowState=/'d
+	clean = sed -e '/^MainWindowGeometry=/d' -e '/^MainWindowState=/d' -e '/^ListViewState=/d' -e '/^PreviewSplitterState=/d' -e '/^SplitterState=/d'
 	smudge = cat
