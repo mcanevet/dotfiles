@@ -106,9 +106,9 @@ export SUMMON_PROVIDER=$HOME/bin/summon-gopass
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias helmfile="summon helmfile -i"
-alias oc="summon oc"
-alias kubectl="summon kubectl"
+# alias helmfile="summon helmfile -i"
+# alias oc="summon oc"
+# alias kubectl="summon kubectl"
 
 terraform() {
 	if [[ $1 == "destroy" ]] && [[ "$CONFIRM_DESTROY" != "1" ]] then
