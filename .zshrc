@@ -28,9 +28,11 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
-export PATH=$PATH:$HOME/bin
-
 zinit ice depth=1; zinit light romkatv/powerlevel10k
+
+# Two regular plugins loaded without investigating.
+zinit light zsh-users/zsh-autosuggestions
+zinit light zdharma/fast-syntax-highlighting
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
