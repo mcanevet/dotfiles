@@ -30,13 +30,17 @@ zinit light-mode for \
 
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
+zinit ice blockf
+zinit light zsh-users/zsh-completions
+
+zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
+zinit snippet OMZ::plugins/git/git.plugin.zsh
+
 # Two regular plugins loaded without investigating.
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma/fast-syntax-highlighting
 
-zinit light zsh-users/zsh-completions
-
-zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
+PATH=$HOME/go/bin:$HOME/.local/bin:$HOME/bin:$PATH
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
