@@ -45,5 +45,8 @@ zinit light zdharma/fast-syntax-highlighting
 zinit ice from"github-rel" as"program" mv"argocd-linux-amd64 -> argocd"
 zinit load argoproj/argo-cd
 
+zinit ice from"github-rel" as"program" bpick"*-linux-amd64.tar.gz" pick"gopass-*/gopass"
+zinit load gopasspw/gopass
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
