@@ -40,7 +40,10 @@ zinit snippet OMZ::plugins/git/git.plugin.zsh
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma/fast-syntax-highlighting
 
-PATH=$HOME/go/bin:$HOME/.local/bin:$HOME/bin:$PATH
+# PATH=$HOME/go/bin:$HOME/.local/bin:$HOME/bin:$PATH
+
+zinit ice from"github-rel" as"program" mv"argocd-linux-amd64 -> argocd"
+zinit load argoproj/argo-cd
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
