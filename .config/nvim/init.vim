@@ -31,6 +31,7 @@ Plug 'ngmy/vim-rubocop'
 
 " File syntax plugins
 Plug 'aouelete/sway-vim-syntax'
+Plug 'zinit-zsh/zinit-vim-syntax'
 
 " Not configurable plugins
 Plug 'godlygeek/tabular'
