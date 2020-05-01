@@ -295,3 +295,5 @@ set -g mouse on
 
 # move status line to top
 # set -g status-position top
+
+set-option -ga terminal-overrides ",*256col*:Tc"
