@@ -48,5 +48,8 @@ zinit load argoproj/argo-cd
 zinit ice from"github-rel" as"program" bpick"*-linux-amd64.tar.gz" pick"gopass-*/gopass"
 zinit load gopasspw/gopass
 
+zinit ice from"github-rel" as"program" mv"helmfile_linux_amd64 -> helmfile"
+zinit load roboll/helmfile
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
