@@ -40,6 +40,11 @@ zinit snippet OMZ::plugins/git/git.plugin.zsh
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma/fast-syntax-highlighting
 
+zinit ice atclone"dircolors -b LS_COLORS > clrs.zsh" \
+    atpull'%atclone' pick"clrs.zsh" nocompile'!' \
+    atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”'
+zinit light trapd00r/LS_COLORS
+
 zinit ice from"github-rel" as"program" mv"argocd-linux-amd64 -> argocd"
 zinit load argoproj/argo-cd
 
