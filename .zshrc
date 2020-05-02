@@ -44,6 +44,11 @@ zinit ice atclone"dircolors -b LS_COLORS > clrs.zsh" \
     atpull'%atclone' pick"clrs.zsh" nocompile'!' \
     atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”'
 zinit light trapd00r/LS_COLORS
+alias ls='ls --color=auto'
+
+zinit as"program" make'!' atclone'./direnv hook zsh > zhook.zsh' \
+    atpull'%atclone' pick"direnv" src"zhook.zsh" for \
+        direnv/direnv
 
 zinit ice from"github-rel" as"program" mv"argocd-linux-amd64 -> argocd"
 zinit load argoproj/argo-cd
