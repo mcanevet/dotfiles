@@ -54,7 +54,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'jiangmiao/auto-pairs'
 Plug 'simnalamburt/vim-mundo'
 Plug 'machakann/vim-highlightedyank'
-Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 Plug 'w0rp/ale'
 Plug 'scrooloose/nerdtree'
 
