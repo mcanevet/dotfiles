@@ -40,8 +40,6 @@ zinit snippet OMZ::plugins/git/git.plugin.zsh
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma/fast-syntax-highlighting
 
-# PATH=$HOME/go/bin:$HOME/.local/bin:$HOME/bin:$PATH
-
 zinit ice from"github-rel" as"program" mv"argocd-linux-amd64 -> argocd"
 zinit load argoproj/argo-cd
 
