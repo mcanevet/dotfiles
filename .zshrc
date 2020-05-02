@@ -27,6 +27,10 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
+# Two regular plugins loaded without investigating.
+zinit light zsh-users/zsh-autosuggestions
+zinit light zdharma/fast-syntax-highlighting
+
 zinit ice blockf atload'zinit creinstall -q .'
 zinit light zsh-users/zsh-completions
 
@@ -36,9 +40,6 @@ zinit light romkatv/powerlevel10k
 zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
 zinit snippet OMZ::plugins/git/git.plugin.zsh
 
-# Two regular plugins loaded without investigating.
-zinit light zsh-users/zsh-autosuggestions
-zinit light zdharma/fast-syntax-highlighting
 
 zinit ice atclone"dircolors -b LS_COLORS > clrs.zsh" \
     atpull'%atclone' pick"clrs.zsh" nocompile'!' \
