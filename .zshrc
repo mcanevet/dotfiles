@@ -28,10 +28,11 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
-zinit ice depth=1; zinit light romkatv/powerlevel10k
-
 zinit ice blockf
 zinit light zsh-users/zsh-completions
+
+zinit ice depth=1
+zinit light romkatv/powerlevel10k
 
 zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
 zinit snippet OMZ::plugins/git/git.plugin.zsh
