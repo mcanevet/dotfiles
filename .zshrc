@@ -57,6 +57,9 @@ zinit from"gh-r" as"program" mv"direnv* -> direnv" \
 zinit ice from"gh-r" as"program" mv"argocd-linux-amd64 -> argocd"
 zinit load argoproj/argo-cd
 
+zinit ice from"gh-r" as"program"
+zinit load cyberark/summon
+
 zinit from"gh-r" as"program" bpick"*-linux-amd64.tar.gz" \
 	atclone"./gopass completion zsh > _gopass" atpull'%atclone' \
 	pick"gopass-*/gopass" for gopasspw/gopass
