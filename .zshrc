@@ -54,14 +54,14 @@ zinit from"gh-r" as"program" mv"direnv* -> direnv" \
     pick"direnv" src="zhook.zsh" for \
         direnv/direnv
 
-zinit ice from"github-rel" as"program" mv"argocd-linux-amd64 -> argocd"
+zinit ice from"gh-r" as"program" mv"argocd-linux-amd64 -> argocd"
 zinit load argoproj/argo-cd
 
 zinit from"gh-r" as"program" bpick"*-linux-amd64.tar.gz" \
 	atclone"./gopass completion zsh > _gopass" atpull'%atclone' \
 	pick"gopass-*/gopass" for gopasspw/gopass
 
-zinit ice from"github-rel" as"program" mv"helmfile_linux_amd64 -> helmfile"
+zinit ice from"gh-r" as"program" mv"helmfile_linux_amd64 -> helmfile"
 zinit load roboll/helmfile
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
