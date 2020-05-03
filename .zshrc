@@ -49,10 +49,10 @@ zinit ice atclone"dircolors -b LS_COLORS > clrs.zsh" \
 zinit light trapd00r/LS_COLORS
 alias ls='ls --color=auto'
 
-zinit from"gh-r" as"program" mv"direnv* -> direnv" \
+zinit ice from"gh-r" as"program" mv"direnv* -> direnv" \
     atclone'./direnv hook zsh > zhook.zsh' atpull'%atclone' \
-    pick"direnv" src="zhook.zsh" for \
-        direnv/direnv
+    pick"direnv" src="zhook.zsh"
+zinit load direnv/direnv
 
 zinit ice from"gh-r" as"program" mv"argocd-linux-amd64 -> argocd"
 zinit load argoproj/argo-cd
@@ -60,9 +60,10 @@ zinit load argoproj/argo-cd
 zinit ice from"gh-r" as"program"
 zinit load cyberark/summon
 
-zinit from"gh-r" as"program" bpick"*-linux-amd64.tar.gz" \
-	atclone"./gopass completion zsh > _gopass" atpull'%atclone' \
-	pick"gopass-*/gopass" for gopasspw/gopass
+zinit ice from"gh-r" as"program" bpick"*-linux-amd64.tar.gz" \
+    atclone"./gopass completion zsh > _gopass" atpull'%atclone' \
+    pick"gopass-*/gopass"
+zinit load gopasspw/gopass
 
 zinit ice as"program" atclone"./kubectl completion zsh > _kubectl" atpull"%atclone"
 zinit snippet "https://storage.googleapis.com/kubernetes-release/release/v1.18.0/bin/linux/amd64/kubectl"
