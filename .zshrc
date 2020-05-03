@@ -61,6 +61,10 @@ zinit from"gh-r" as"program" bpick"*-linux-amd64.tar.gz" \
 	atclone"./gopass completion zsh > _gopass" atpull'%atclone' \
 	pick"gopass-*/gopass" for gopasspw/gopass
 
+zinit ice as"program" atclone"./kubectl completion zsh > _kubectl" atpull"%atclone"
+zinit snippet "https://storage.googleapis.com/kubernetes-release/release/v1.18.0/bin/linux/amd64/kubectl"
+zinit snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
+
 zinit ice from"gh-r" as"program" mv"helmfile_linux_amd64 -> helmfile"
 zinit load roboll/helmfile
 
