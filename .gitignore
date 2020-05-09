@@ -26,6 +26,7 @@
 .config/ibus/
 .config/inkscape/
 .config/libreoffice/
+.config/menus/
 .config/mimeapps.list
 .config/monitors.xml
 .config/monitors.xml~
