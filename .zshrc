@@ -110,5 +110,11 @@ zinit snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
 zinit ice from"gh-r" as"program" mv"helmfile_linux_amd64 -> helmfile"
 zinit load roboll/helmfile
 
+# Aliases
+alias l='exa'
+alias la='exa -a'
+alias ll='exa -lah'
+alias ls='exa --color=auto'
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
