@@ -69,7 +69,7 @@ zinit light-mode for \
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma/fast-syntax-highlighting
 
-zinit ice blockf atload'zinit creinstall -q .'
+zinit ice blockf
 zinit light zsh-users/zsh-completions
 
 zinit ice depth=1
