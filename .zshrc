@@ -107,6 +107,10 @@ zinit ice as"program" atclone"./kubectl completion zsh > _kubectl" atpull"%atclo
 zinit snippet "https://storage.googleapis.com/kubernetes-release/release/v1.18.0/bin/linux/amd64/kubectl"
 zinit snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
 
+zinit ice as"program" atclone"tar xzf helm-v3.2.1-linux-amd64.tar.gz && linux-amd64/helm completion zsh > _helm" \
+	atpull"%atclone" pick"linux-amd64/helm"
+zinit snippet "https://get.helm.sh/helm-v3.2.1-linux-amd64.tar.gz"
+
 zinit ice from"gh-r" as"program" mv"helmfile_linux_amd64 -> helmfile"
 zinit load roboll/helmfile
 
