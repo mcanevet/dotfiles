@@ -55,6 +55,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'simnalamburt/vim-mundo'
 Plug 'machakann/vim-highlightedyank'
 Plug 'gruvbox-community/gruvbox'
+Plug 'arcticicestudio/nord-vim'
 Plug 'w0rp/ale'
 Plug 'scrooloose/nerdtree'
 
@@ -145,7 +146,7 @@ let g:go_fmt_command = 'goimports'
 set background=dark
 set termguicolors
 let g:gruvbox_italic=1
-colorscheme gruvbox
+colorscheme nord
 
 " Enable persistent undo so that undo history persists across vim sessions
 set undofile
