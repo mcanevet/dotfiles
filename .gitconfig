@@ -6,5 +6,11 @@
 [color]
 	ui = true
 [filter "keepassxc"]
-	clean = sed -e '/^MainWindowGeometry=/d' -e '/^MainWindowState=/d' -e '/^ListViewState=/d' -e '/^PreviewSplitterState=/d' -e '/^SplitterState=/d'
+	clean = sed \
+		-e '/^ListViewState=/d' \
+		-e '/^MainWindowGeometry=/d' \
+		-e '/^MainWindowState=/d' \
+		-e '/^PreviewSplitterState=/d' \
+		-e '/^SearchViewState=/d' \
+		-e '/^SplitterState=/d'
 	smudge = cat
