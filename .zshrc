@@ -92,6 +92,9 @@ zinit ice from"gh-r" as"program" mv"direnv* -> direnv" \
     pick"direnv" src="zhook.zsh"
 zinit load direnv/direnv
 
+zinit ice from"gh-r" as"program" mv"yq_linux_amd64 -> yq"
+zinit load mikefarah/yq
+
 zinit ice from"gh-r" as"program" mv"argocd-linux-amd64 -> argocd"
 zinit load argoproj/argo-cd
 
