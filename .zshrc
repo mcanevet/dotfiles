@@ -79,6 +79,12 @@ zinit snippet "https://get.helm.sh/helm-v3.2.1-linux-amd64.tar.gz"
 zinit ice from"gh-r" as"program" mv"helmfile_linux_amd64 -> helmfile"
 zinit load roboll/helmfile
 
+zinit id-as=terraform as='monitor|command' extract \
+    dlink0='/terraform/%VERSION%/' \
+    dlink='/terraform/%VERSION%/terraform_%VERSION%_linux_amd64.zip' \
+    for \
+        http://releases.hashicorp.com/terraform/
+
 # Two regular plugins loaded without investigating.
 zinit light zsh-users/zsh-autosuggestions
 zinit ice atinit'zicompinit'
