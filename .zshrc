@@ -1,3 +1,6 @@
+# Skip the not really helping Debian global compinit
+skip_global_compinit=1
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -94,9 +97,6 @@ zinit load roboll/helmfile
 # Two regular plugins loaded without investigating.
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma/fast-syntax-highlighting
-
-# Skip the not really helping Debian global compinit
-skip_global_compinit=1
 
 # Use modern completion system
 autoload -Uz compinit
