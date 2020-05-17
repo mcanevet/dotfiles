@@ -46,14 +46,15 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
+zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
+zinit snippet OMZ::plugins/git/git.plugin.zsh
+zinit snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
+
 zinit ice blockf
 zinit light zsh-users/zsh-completions
 
 zinit ice depth=1
 zinit light romkatv/powerlevel10k
-
-zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
-zinit snippet OMZ::plugins/git/git.plugin.zsh
 
 zinit ice as"program" pick"bin/git-dsf"
 zinit light zdharma/zsh-diff-so-fancy
@@ -85,7 +86,6 @@ zinit load gopasspw/gopass
 
 zinit ice as"program" atclone"./kubectl completion zsh > _kubectl" atpull"%atclone"
 zinit snippet "https://storage.googleapis.com/kubernetes-release/release/v1.18.0/bin/linux/amd64/kubectl"
-zinit snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
 
 zinit ice as"program" atclone"tar xzf helm-v3.2.1-linux-amd64.tar.gz && linux-amd64/helm completion zsh > _helm" \
 	atpull"%atclone" pick"linux-amd64/helm"
