@@ -98,6 +98,7 @@ alias ll='exa -lah'
 alias ls='exa --color=auto'
 
 export PATH="$HOME/.local/bin:$PATH"
+export SUMMON_PROVIDER="$HOME/bin/summon-gopass"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
