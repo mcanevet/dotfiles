@@ -14,3 +14,5 @@
 		-e '/^SearchViewState=/d' \
 		-e '/^SplitterState=/d'
 	smudge = cat
+[pull]
+	rebase = true
