@@ -30,6 +30,7 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
+zinit snippet OMZ::lib/completion.zsh
 zinit snippet OMZ::lib/history.zsh
 zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
 zinit snippet OMZ::plugins/git/git.plugin.zsh
