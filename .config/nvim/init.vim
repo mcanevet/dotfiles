@@ -32,6 +32,7 @@ Plug 'ngmy/vim-rubocop'
 " File syntax plugins
 Plug 'aouelete/sway-vim-syntax'
 Plug 'zinit-zsh/zinit-vim-syntax'
+Plug 'vim-scripts/haproxy'
 
 " Not configurable plugins
 Plug 'godlygeek/tabular'
@@ -122,6 +123,8 @@ augroup vimcommentary
 	autocmd!
 	autocmd FileType terraform setlocal commentstring=#%s
 augroup END
+
+au BufRead,BufNewFile haproxy* set ft=haproxy
 
 " Configure vim-terraform
 let g:terraform_align=1
