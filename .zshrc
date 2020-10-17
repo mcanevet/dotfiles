@@ -67,11 +67,6 @@ zinit wait"1" lucid from"gh-r" as"null" for \
 	sbin"yh"                               andreazorzetto/yh \
 	sbin"yq_linux_amd64 -> yq"             mikefarah/yq
 
-zinit ice from"gh-r" as"program" mv"direnv* -> direnv" \
-    atclone'./direnv hook zsh > zhook.zsh' atpull'%atclone' \
-    pick"direnv" src="zhook.zsh"
-zinit load direnv/direnv
-
 zinit ice from"gh-r" ver"v1.9.2" as"program" bpick"*-linux-amd64.tar.gz" \
     atclone"./gopass completion zsh > _gopass" atpull'%atclone' \
     pick"gopass-*/gopass"
