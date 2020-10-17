@@ -52,71 +52,47 @@ zinit ice atclone"dircolors -b LS_COLORS > clrs.zsh" \
 zinit light trapd00r/LS_COLORS
 alias ls='ls --color=auto'
 
+zinit wait"1" lucid from"gh-r" as"null" for \
+	sbin"argocd-linux-amd64 -> argocd"     argoproj/argo-cd \
+	sbin"aspiratv"                         simulot/aspiratv \
+	sbin"chroma"                           alecthomas/chroma \
+	sbin"exa* -> exa"                      ogham/exa \
+	sbin"fx-linux -> fx"                   antonmedv/fx \
+	sbin"helmfile_linux_amd64 -> helmfile" roboll/helmfile \
+	sbin"k3d-linux-amd64 -> k3d"           rancher/k3d \
+	sbin"k9s"                              derailed/k9s \
+	sbin"kustomize"                        kubernetes-sigs/kustomize \
+	sbin"usr/local/bin/sops"               mozilla/sops \
+	sbin"summon"                           cyberark/summon \
+	sbin"yh"                               andreazorzetto/yh \
+	sbin"yq_linux_amd64 -> yq"             mikefarah/yq
+
 zinit ice from"gh-r" as"program" mv"direnv* -> direnv" \
     atclone'./direnv hook zsh > zhook.zsh' atpull'%atclone' \
     pick"direnv" src="zhook.zsh"
 zinit load direnv/direnv
-
-zinit ice from"gh-r" as"program" mv"yq_linux_amd64 -> yq"
-zinit load mikefarah/yq
-
-zinit ice from"gh-r" as"program"
-zinit load simulot/aspiratv
-
-zinit ice from"gh-r" as"program" mv"argocd-linux-amd64 -> argocd"
-zinit load argoproj/argo-cd
-
-zinit ice from"gh-r" as"program"
-zinit load cyberark/summon
-
-zinit ice from"gh-r" as"program" pick"usr/local/bin/sops"
-zinit load mozilla/sops
 
 zinit ice from"gh-r" ver"v1.9.2" as"program" bpick"*-linux-amd64.tar.gz" \
     atclone"./gopass completion zsh > _gopass" atpull'%atclone' \
     pick"gopass-*/gopass"
 zinit load gopasspw/gopass
 
-zinit ice lucid wait'1' id-as'kubectl' null sbin"kubectl"
+zinit ice lucid wait'1' id-as'kubectl' null sbin"kubectl" \
+	atclone"./kubectl completion zsh > _kubectl" atpull"%atclone" \
 zinit snippet https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
-
-zinit ice from"gh-r" as"program"
-zinit load derailed/k9s
-
-zinit ice from"gh-r" as"program" mv"k3d-linux-amd64 -> k3d"
-zinit load rancher/k3d
-
-zinit ice from"gh-r" as"program"
-zinit load kubernetes-sigs/kustomize
 
 zinit id-as"helm" as="monitor|command" extract \
     pick"linux-amd64/helm" \
     dlink"https://get.helm.sh/helm-v%VERSION%-linux-amd64.tar.gz" \
     for https://github.com/helm/helm/releases/
 
-zinit ice from"gh-r" as"program" mv"helmfile_linux_amd64 -> helmfile"
-zinit load roboll/helmfile
-
 zinit id-as'terraform' as'readurl|command' extract \
     dlink0'/terraform/%VERSION%/' \
     dlink'/terraform/%VERSION%/terraform_%VERSION%_linux_amd64.zip' \
     for https://releases.hashicorp.com/terraform/
 
-zinit ice from"gh-r" as"program"
-zinit load alecthomas/chroma
-
-# ogham/exa, replacement for ls
-zinit ice wait"2" lucid from"gh-r" as"program" mv"exa* -> exa"
-zinit light ogham/exa
-
-zinit ice from"gh-r" as"program" mv"fx-linux -> fx"
-zinit load antonmedv/fx
-
-zinit ice from"gh-r" as"program"
-zinit load andreazorzetto/yh
-
-zinit ice from"gh-r" as"program" bpick"youtube-dl"
-zinit load ytdl-org/youtube-dl
+# Plugin history-search-multi-word loaded with investigating.
+zinit load zdharma/history-search-multi-word
 
 # Two regular plugins loaded without investigating.
 zinit light zsh-users/zsh-autosuggestions
