@@ -77,11 +77,6 @@ zinit ice from"gh-r" ver"v1.9.2" as"program" bpick"*-linux-amd64.tar.gz" \
     pick"gopass-*/gopass"
 zinit load gopasspw/gopass
 
-zinit id-as"openshift-client" as"readurl|command" extract \
-	dlink0'!%VERSION%~%(unreleased|stable.*|latest.*|fast.*|candidate.*|.*-rc.0|.*-rc.1|.*-rc.2|.*-rc.3|.*-rc.4)%' \
-    dlink"openshift-client-linux-%VERSION%.tar.gz" for \
-        https://mirror.openshift.com/pub/openshift-v4/clients/ocp/
-
 zinit ice lucid wait'1' id-as'kubectl' null sbin"kubectl"
 zinit snippet https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
 
