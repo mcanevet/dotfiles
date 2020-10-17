@@ -71,8 +71,7 @@ zinit ice from"gh-r" ver"v1.9.2" as"program" bpick"*-linux-amd64.tar.gz" \
     pick"gopass-*/gopass"
 zinit load gopasspw/gopass
 
-zinit ice lucid wait'1' id-as'kubectl' null sbin"kubectl" \
-	atclone"./kubectl completion zsh > _kubectl" atpull"%atclone" \
+zinit ice id-as"kubectl" lucid pick"kubectl/kubectl" as"program" atclone"./kubectl completion zsh > _kubectl" atpull'%atclone'
 zinit snippet https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
 
 zinit id-as"helm" as="readurl|command" extract \
