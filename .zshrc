@@ -22,7 +22,7 @@ autoload -Uz _zinit
 # (this is currently required for annexes)
 zinit light-mode for \
     zinit-zsh/z-a-rust \
-    zinit-zsh/z-a-as-monitor \
+    zinit-zsh/z-a-readurl \
     zinit-zsh/z-a-patch-dl \
     zinit-zsh/z-a-bin-gem-node
 
@@ -75,7 +75,7 @@ zinit ice lucid wait'1' id-as'kubectl' null sbin"kubectl" \
 	atclone"./kubectl completion zsh > _kubectl" atpull"%atclone" \
 zinit snippet https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
 
-zinit id-as"helm" as="monitor|command" extract \
+zinit id-as"helm" as="readurl|command" extract \
     pick"linux-amd64/helm" \
     dlink"https://get.helm.sh/helm-v%VERSION%-linux-amd64.tar.gz" \
     for https://github.com/helm/helm/releases/
