@@ -88,10 +88,13 @@ zinit id-as'terraform' as'readurl|command' extract \
 # Plugin history-search-multi-word loaded with investigating.
 zinit load zdharma/history-search-multi-word
 
-# Two regular plugins loaded without investigating.
-zinit light zsh-users/zsh-autosuggestions
-zinit ice atinit'zicompinit'
-zinit light zdharma/fast-syntax-highlighting
+zinit wait lucid light-mode for \
+	atinit"zicompinit; zicdreplay" \
+		zdharma/fast-syntax-highlighting \
+	atload"_zsh_autosuggest_start" \
+		zsh-users/zsh-autosuggestions \
+	blockf atpull'zinit creinstall -q .' \
+		zsh-users/zsh-completions
 
 # Aliases
 alias l='exa'
