@@ -78,7 +78,7 @@ zinit ice from"gh-r" ver"v1.9.2" as"program" bpick"*-linux-amd64.tar.gz" \
 zinit load gopasspw/gopass
 
 zinit id-as"openshift-client" as"readurl|command" extract \
-	dlink0'!%VERSION%~%(unreleased|stable.*|latest.*|fast.*|candidate.*|.*-rc.1|.*-rc.2|.*-rc.3|.*-rc.4)%' \
+	dlink0'!%VERSION%~%(unreleased|stable.*|latest.*|fast.*|candidate.*|.*-rc.0|.*-rc.1|.*-rc.2|.*-rc.3|.*-rc.4)%' \
     dlink"openshift-client-linux-%VERSION%.tar.gz" for \
         https://mirror.openshift.com/pub/openshift-v4/clients/ocp/
 
