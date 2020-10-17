@@ -82,7 +82,7 @@ zinit id-as"openshift-client" as"readurl|command" extract \
     dlink"openshift-client-linux-%VERSION%.tar.gz" for \
         https://mirror.openshift.com/pub/openshift-v4/clients/ocp/
 
-zinit ice lucid wait'1' id-as'kubectl' as"null" sbin"kubectl"
+zinit ice lucid wait'1' id-as'kubectl' null sbin"kubectl"
 zinit snippet https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
 
 zinit ice from"gh-r" as"program"
