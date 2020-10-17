@@ -90,17 +90,17 @@ zinit ice from"gh-r" as"program"
 zinit load kubernetes-sigs/kustomize
 
 zinit id-as"helm" as="monitor|command" extract \
-	pick"linux-amd64/helm" \
-	dlink"https://get.helm.sh/helm-v%VERSION%-linux-amd64.tar.gz" \
-	for https://github.com/helm/helm/releases/
+    pick"linux-amd64/helm" \
+    dlink"https://get.helm.sh/helm-v%VERSION%-linux-amd64.tar.gz" \
+    for https://github.com/helm/helm/releases/
 
 zinit ice from"gh-r" as"program" mv"helmfile_linux_amd64 -> helmfile"
 zinit load roboll/helmfile
 
 zinit id-as'terraform' as'readurl|command' extract \
-	dlink0'/terraform/%VERSION%/' \
-	dlink'/terraform/%VERSION%/terraform_%VERSION%_linux_amd64.zip' \
-	for https://releases.hashicorp.com/terraform/
+    dlink0'/terraform/%VERSION%/' \
+    dlink'/terraform/%VERSION%/terraform_%VERSION%_linux_amd64.zip' \
+    for https://releases.hashicorp.com/terraform/
 
 zinit ice from"gh-r" as"program"
 zinit load alecthomas/chroma
