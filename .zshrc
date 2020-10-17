@@ -77,10 +77,22 @@ zinit ice from"gh-r" ver"v1.9.2" as"program" bpick"*-linux-amd64.tar.gz" \
     pick"gopass-*/gopass"
 zinit load gopasspw/gopass
 
-zinit id-as"openshift-client" as"monitor|command" extract \
+zinit id-as"openshift-client" as"readurl|command" extract \
 	dlink0'!%VERSION%~%(unreleased|stable.*|latest.*|fast.*|candidate.*|.*-rc.1|.*-rc.2|.*-rc.3|.*-rc.4)%' \
     dlink"openshift-client-linux-%VERSION%.tar.gz" for \
         https://mirror.openshift.com/pub/openshift-v4/clients/ocp/
+
+zinit ice lucid wait'1' id-as'kubectl' as"null" sbin"kubectl"
+zinit snippet https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+
+zinit ice from"gh-r" as"program"
+zinit load derailed/k9s
+
+zinit ice from"gh-r" as"program" mv"k3d-linux-amd64 -> k3d"
+zinit load rancher/k3d
+
+zinit ice from"gh-r" as"program"
+zinit load kubernetes-sigs/kustomize
 
 zinit id-as"helm" as="monitor|command" extract \
 	pick"linux-amd64/helm" \
@@ -90,11 +102,26 @@ zinit id-as"helm" as="monitor|command" extract \
 zinit ice from"gh-r" as"program" mv"helmfile_linux_amd64 -> helmfile"
 zinit load roboll/helmfile
 
-zinit id-as=terraform as='monitor|command' extract \
-    dlink0='/terraform/%VERSION%/' \
-    dlink='/terraform/%VERSION%/terraform_%VERSION%_linux_amd64.zip' \
-    for \
-        http://releases.hashicorp.com/terraform/
+zinit id-as'terraform' as'readurl|command' extract \
+	dlink0'/terraform/%VERSION%/' \
+	dlink'/terraform/%VERSION%/terraform_%VERSION%_linux_amd64.zip' \
+	for https://releases.hashicorp.com/terraform/
+
+zinit ice from"gh-r" as"program"
+zinit load alecthomas/chroma
+
+# ogham/exa, replacement for ls
+zinit ice wait"2" lucid from"gh-r" as"program" mv"exa* -> exa"
+zinit light ogham/exa
+
+zinit ice from"gh-r" as"program" mv"fx-linux -> fx"
+zinit load antonmedv/fx
+
+zinit ice from"gh-r" as"program"
+zinit load andreazorzetto/yh
+
+zinit ice from"gh-r" as"program" bpick"youtube-dl"
+zinit load ytdl-org/youtube-dl
 
 # Two regular plugins loaded without investigating.
 zinit light zsh-users/zsh-autosuggestions
