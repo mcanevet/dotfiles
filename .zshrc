@@ -81,7 +81,7 @@ zinit id-as"helm" as="readurl|command" extract \
 	for https://github.com/helm/helm/releases/
 
 zinit id-as'terraform' as'readurl|command' extract \
-	dlink0'/terraform/%VERSION%/' \
+	dlink0'/terraform/%VERSION%/~%.*-(alpha|beta).*%' \
 	dlink'/terraform/%VERSION%/terraform_%VERSION%_linux_amd64.zip' \
 	for https://releases.hashicorp.com/terraform/
 
