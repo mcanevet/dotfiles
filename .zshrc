@@ -61,6 +61,7 @@ zinit wait"1" lucid from"gh-r" as"null" for \
 	sbin"helmfile_linux_amd64 -> helmfile" roboll/helmfile \
 	sbin"k3d-linux-amd64 -> k3d" rancher/k3d \
 	sbin"k9s" derailed/k9s \
+	sbin"usr/bin/gh" cli/cli \
 	sbin"kustomize" kubernetes-sigs/kustomize \
 	sbin"usr/local/bin/sops" mozilla/sops \
 	sbin"summon" cyberark/summon \
