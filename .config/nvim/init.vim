@@ -44,6 +44,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'maxbrunsfeld/vim-yankstack'
+Plug 'Einenlum/yaml-revealer'
 
 " Configurable plugins
 Plug 'ctrlpvim/ctrlp.vim'
