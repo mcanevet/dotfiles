@@ -55,7 +55,7 @@ zinit wait"1" lucid from"gh-r" as"null" for \
 	sbin"argocd-linux-amd64 -> argocd" argoproj/argo-cd \
 	sbin"aspiratv" simulot/aspiratv \
 	sbin"chroma" alecthomas/chroma \
-	sbin"exa* -> exa" ogham/exa \
+	sbin"bin/exa" ogham/exa \
 	sbin"fx-linux -> fx" antonmedv/fx \
 	sbin"helmfile_linux_amd64 -> helmfile" roboll/helmfile \
 	sbin"k3d-linux-amd64 -> k3d" rancher/k3d \
