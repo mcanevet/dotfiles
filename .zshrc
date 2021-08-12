@@ -63,6 +63,7 @@ zinit wait"1" lucid from"gh-r" as"null" for \
 	sbin"k9s" derailed/k9s \
 	sbin"usr/bin/gh" cli/cli \
 	sbin"terraform-docs" terraform-docs/terraform-docs \
+	sbin"tfmigrate" minamijoyo/tfmigrate \
 	sbin"usr/local/bin/helm-docs" norwoodj/helm-docs \
 	sbin"kustomize" kubernetes-sigs/kustomize \
 	sbin"usr/local/bin/sops" mozilla/sops \
