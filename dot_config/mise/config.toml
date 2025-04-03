@@ -1,3 +1,2 @@
 [tools]
-jq = "latest"
 terraform = "latest"
