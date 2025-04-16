@@ -1,6 +1,6 @@
 if [[ `uname -m` == "arm64" ]]
-    eval "$(/usr/local/bin/brew shellenv)"
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 then
 else
-    eval "$(/opt/homebrew/bin/brew shellenv)"
+    eval "$(/usr/local/bin/brew shellenv)"
 fi
