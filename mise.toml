@@ -1,0 +1,5 @@
+[tools]
+helmfile = "latest"
+pre-commit = "latest"
+gcloud = "latest"
+task = "latest"
